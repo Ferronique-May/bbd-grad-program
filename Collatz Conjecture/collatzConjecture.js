@@ -1,7 +1,8 @@
 /**
  * Collatz Conjecture
  * Functions below count the number of operations it'll take to reach one for any given positive integer. 
- * Big integers (numbers > 2^53) are not accounted for, especially in format 147573952589676410000n.
+ * Big integers in the format 147573952589676410000n or 143 254 655 879 543 987 are not accounted for. 
+ * Please do not leave spaces between numbers.
  */
 
 //Set up global variable to keep track of count for recursion function
@@ -11,7 +12,7 @@ let countOps= 0;
 function countOpsRecursion (num) {
     
     //Check if input is a number and if number is greater than 0.
-    if (typeof(num) !== "number" || num <=0 ) return "Oops, seems we have a problem. Please use a NUMBER greater than 0";
+    if (typeof(num) !== "number" || num < 0 ) return "Oops, seems we have a problem. Please use a NUMBER greater than 0";
 
     //Check if number is one.
     if (num === 1) return countOps;
@@ -40,7 +41,7 @@ function countOpsWhileLoop (num) {
     let numberOfOps = 0
     let intialNumber = num;
     //Check if input is actually a number and if number is greater than 0.
-    if (typeof(num) !== "number" || num <=0 ) return "Oops, seems we have a problem. Please use a NUMBER greater than 0";
+    if (typeof(num) !== "number" || num < 0 ) return "Oops, seems we have a problem. Please use a NUMBER greater than 0";
 
     //Check if number is one.
     if (num === 1) return numberOfOps;
@@ -78,6 +79,9 @@ function countOpsWhileLoop (num) {
 // console.log(countOpsRecursion(16));
 //Expected output: For 16 it takes about 4 operations to get to one.
 
+// console.log(countOpsRecursion(143254655879543987));
+//Expected output: For 143254655879543987 it takes about 246 operations to get to one.
+
 // console.log(countOpsRecursion("1223"));
 //Expected output: Oops, seems we have a problem. Please use a NUMBER greater than 0
 
@@ -94,6 +98,9 @@ function countOpsWhileLoop (num) {
 
 // console.log(countOpsWhileLoop(16));
 //Expected output: For 16 it takes about 4 operations to get to one.
+
+// console.log(countOpsWhileLoop(143254655879543987));
+//Expected output: For 143254655879543987 it takes about 246 operations to get to one.
 
 // console.log(countOpsWhileLoop("1223"));
 //Expected output: Oops, seems we have a problem. Please use a NUMBER greater than 0
