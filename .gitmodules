@@ -1,0 +1,3 @@
+[submodule "Databases/Project/house-roster-db"]
+	path = Databases/Project/house-roster-db
+	url = https://github.com/johannsbbd/house-roster-db.git

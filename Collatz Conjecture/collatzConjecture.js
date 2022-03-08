@@ -96,7 +96,7 @@ function countOpsWhileLoop (num) {
 // console.log(countOpsWhileLoop(1));
 //Expected output: For 1 it takes about 0 operations to get to one.
 
-// console.log(countOpsWhileLoop(16));
+console.log(countOpsWhileLoop(9));
 //Expected output: For 16 it takes about 4 operations to get to one.
 
 // console.log(countOpsWhileLoop(143254655879543987));
